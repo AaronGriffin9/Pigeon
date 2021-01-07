@@ -1,0 +1,264 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  background-color: #808080;
+  border: 3px solid #96e4fe;
+  transition: all 0.7s ease-in-out;
+}
+.nav-list{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 10%;
+}
+.nav-list li{
+  list-style: none;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 0.5em;
+}
+.nav-list li a{
+  text-decoration: none;
+  padding: 1.5em;
+  color: white;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  padding: 18px 1.4em;
+  color: white;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  letter-spacing: 2px;
+  width: 20rem;
+  font-size: 30px;
+}
+.hamburger-menu-icon{
+  display: none;
+  cursor: pointer;
+}
+.line{
+  width: 33px;
+  background: white;
+  height: 4px;
+  margin: 5px;
+  border-radius: 2em;
+}
+.container{
+  width: 100%;
+  display: flex;
+}
+.left{
+  flex: 1;
+  height: auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em
+}
+.right{
+  flex: 1;
+  height: auto;
+  line-height: 1.5em;
+  padding-top: 1.5em;
+}
+.main-img{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: auto;
+  box-shadow: 10px 10px #262626;
+}
+.main-img:hover{
+  cursor: pointer;
+  transition: transform .5s ease-in-out;
+  transform: scale(1.03);
+}
+.para-main{
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-family: 'Oldenburg', cursive;
+  width: 85%;
+  margin-top: 5em;
+}
+.secondary{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.para-secondary{
+  font-size: 20px;
+  font-family: 'Oldenburg', cursive;
+}
+footer{
+  display: flex;
+  background-color: #808080;
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+.address{
+  display: inline-block;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  width: 33%;
+}
+.address-text{
+  display: flex;
+  justify-content: center;
+}
+.contact{
+  display: inline-block;
+  padding-top: 1.5em;
+  width: 33%;
+}
+.contact-text{
+  display: flex;
+  justify-content: center;
+}
+.social{
+  display: inline-block;
+  padding-top: 1.5em;
+  width: 33%;
+}
+.social-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon{
+  margin: 10px;
+  text-decoration: none;
+}
+.fa-facebook{
+  font-size: 37px;
+  background-color: rgb(57,86,156);
+  color: white;
+  padding: 4px 3px 0px 11px;
+}
+.fa-instagram{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 46px;
+}
+.fa-twitter{
+  padding: 5px 5px 5px 5px;
+  color: white;
+  background-color: RGB(29,161,242);
+  font-size: 30px;
+}
+@media screen and (max-width: 880px){
+  .navbar{
+    flex-direction: column;
+  }
+  body{
+    user-select: none!important;
+    overflow-x: hidden;
+  }
+  .nav-list{
+    display: none;
+    flex-direction: column;
+    transform: translateX(100%);
+  }
+  .nav-list li{
+    text-align: center;
+  }
+  .buttons{
+    position: relative;
+  }
+  .logo{
+    padding: 11px 1.2em;
+  }
+  .hamburger-menu-icon{
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 0.8rem;
+  }
+  .navbar-height-responsive{
+    height: 60px;
+  }
+  .navbar-height-normal{
+    height: 20rem;
+  }
+  .transform{
+    display: block;
+    transform: translateX(0%);
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .left{
+    height: 200px;
+  }
+  .right{
+    flex-direction: column;
+    padding: 0;
+  }
+  .para-main{
+    margin-top: 1em;
+  }
+  .secondary{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    width: 85%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .para-secondary{
+    font-size: 16px;
+    font-family: 'Oldenburg', cursive;
+  }
+  footer{
+    flex-direction: column;
+    height: 330px;
+  }
+  .address{
+    width: 100%;
+    padding: 10px;
+  }
+  .contact{
+    width: 100%;
+    padding: 10px;
+  }
+  .social{
+    width: 100%;
+    padding-top: 10px;
+  }
+  @keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+}
