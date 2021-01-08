@@ -3,9 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 a{
   text-decoration: none;
   color: white;
+}
+video{
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
 }
 .navbar{
   width: 100%;
@@ -60,6 +70,9 @@ a{
   width: 100%;
   display: flex;
 }
+.training-container{
+  display: block;
+}
 .left{
   flex: 1;
   height: auto;
@@ -72,6 +85,51 @@ a{
   line-height: 1.5em;
   padding-top: 1.5em;
 }
+.top{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2em;
+}
+.racing-top{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2em;
+}
+.racing-bottom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.heading{
+  text-align: center;
+  margin-top: 1em;
+}
+.racing-heading{
+  margin-top: 0;
+}
+.text{
+  width: 40%;
+}
+.training-para{
+  margin-top: 1em;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Oldenburg', cursive;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.heading-two{
+  margin-top: 2em;
+}
 .main-img{
   display: flex;
   justify-content: center;
@@ -79,7 +137,6 @@ a{
   margin-right: auto;
   width: 85%;
   height: auto;
-  box-shadow: 10px 10px #262626;
 }
 .main-img:hover{
   cursor: pointer;
@@ -108,6 +165,41 @@ a{
 .para-secondary{
   font-size: 20px;
   font-family: 'Oldenburg', cursive;
+}
+.breeding-container{
+  display: block;
+}
+.racing-container{
+  display: block;
+}
+.content{
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+.left-col{
+  display: inline-block;
+  margin-left: 2em;
+  flex: 1;
+}
+.right-col{
+  float: right;
+  margin-right: 2em;
+  display: inline-block;
+  flex: 1;
+}
+.breeding-para{
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+.racing-para{
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
 }
 footer{
   display: flex;
@@ -169,6 +261,60 @@ footer{
   background-color: RGB(29,161,242);
   font-size: 30px;
 }
+@media screen and (max-width: 1300px){
+  .para-main{
+    margin-top: 2em;
+    font-size: 20px;
+    width: 100%;
+  }
+  .text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 80%;
+  }
+  .racing-img{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .heading{
+    font-size: 25px;
+    margin-top: 0;
+  }
+  .training-para{
+    font-size: 16px;
+  }
+  video{
+    width: 700px;
+  }
+}
+@media screen and (max-width: 1080px){
+  .para-main{
+    margin-top: 1;
+    font-size: 16px;
+    margin: 0;
+    width: 100%;
+  }
+  .text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 80%;
+  }
+  .racing-img{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .heading{
+    font-size: 25px;
+    margin-top: 0;
+  }
+  .training-para{
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 880px){
   .navbar{
     flex-direction: column;
@@ -213,7 +359,7 @@ footer{
     animation-duration: .5s;
   }
   .container{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .left{
     height: 200px;
@@ -223,6 +369,9 @@ footer{
     padding: 0;
   }
   .para-main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
     margin-top: 1em;
   }
   .secondary{
@@ -239,7 +388,8 @@ footer{
   }
   footer{
     flex-direction: column;
-    height: 330px;
+    height: 250px;
+    margin-top: 2em;
   }
   .address{
     width: 100%;
@@ -252,6 +402,48 @@ footer{
   .social{
     width: 100%;
     padding-top: 10px;
+  }
+  .top{
+    flex-direction: column-reverse;
+  }
+  .racing-top{
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+  }
+  .racing-bottom{
+    flex-direction: column;
+  }
+  .racing-img{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+  }
+  .text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 80%;
+  }
+  video{
+    width: 300px;
+  }
+  .content{
+    flex-direction: column;
+  }
+  .left-col{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .right-col{
+    width: 90%;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
   }
   @keyframes fadeInOpacity {
 	0% {
